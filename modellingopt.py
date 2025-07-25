@@ -46,6 +46,6 @@ for n_estimators in n_estimators_range:
                 best_params = {"n_estimators": n_estimators, "max_depth": max_depth}
                 mlflow.sklearn.log_model(
                     sk_model=model,
-                    artifact_path="model",
+                    name="model",
                     input_example=input_example
                     )
